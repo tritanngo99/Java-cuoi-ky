@@ -1,0 +1,35 @@
+public class bai_2 {
+	public void ptbh(float a,float b,float c)
+	{
+		if(a==0)
+		{
+			if(b==0)
+			{
+				if(c==0) System.out.print("phuong trinh vo so nghiem");
+				else System.out.print("phuong trinh vo nghiem");
+			}
+			else System.out.println("phuong trinh co 1 nghiem: "+(float)-c/b);
+		}
+		else
+		{
+			double d = b*b-4*a*c;
+			if(d<0) System.out.print("phuong trinh vo nghiem");
+			else if(d==0) System.out.println("phuong trinh co nghiem kep: "+(float)-b/(2*a));
+			else
+			{
+				float x1 = (float)(-b+Math.sqrt(d))/(2*a);
+				float x2 = (float)(-b-Math.sqrt(d))/(2*a);
+				System.out.println("phuong trinh co hai nghiem");
+				System.out.println("x1 = "+x1);
+				System.out.println("x2 = "+x2);
+			}
+		}
+	}
+	public static void main(String[] args) {
+		bai_2 bai2 = new bai_2();
+		System.out.println("phuong trinh bac hai");
+		bai2.ptbh(1, 3, 2);
+		bai2.ptbh(1,4,4);
+	}
+
+}
