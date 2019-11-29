@@ -1,0 +1,20 @@
+public class bai_8 {
+	public static int gt(int i)
+	{
+		if(i==0) return 1;
+		else return i*gt(i-1);
+	}
+	public void tong(int n)
+	{
+		float s = 0;
+		for(int i=1;i<=n;i++)
+		{
+			s = s + (float)1/gt(2*i-1);
+		}
+		System.out.printf("s = %.3f",s);
+	}
+	public static void main(String[] args) {
+		bai_8 bai8 = new bai_8();
+		bai8.tong(3);
+	}
+}
