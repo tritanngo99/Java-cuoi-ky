@@ -1,0 +1,23 @@
+public class bai_10 {
+	public void tongtich(long n)
+	{
+		long m=n,i=0,j=1;
+		while(m!=0)
+		{
+			i = i + m%10;
+			m/=10;
+		}
+		while(n!=0)
+		{
+			j *= n%10;
+			n/=10;
+		}
+		System.out.printf("tong cac chu so: %d\n",i);
+		System.out.printf("tich cac chu so: %d",j);
+	}
+	public static void main(String[] args) {
+		bai_10 bai10 = new bai_10();
+		bai10.tongtich(234);
+	}
+
+}
