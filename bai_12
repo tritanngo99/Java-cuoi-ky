@@ -1,0 +1,15 @@
+public class bai_12 {
+	public void chinhphuong(float p)
+	{
+		int m = 0;
+		for(int i=1;i<p;i++)
+			if(i*i==p) m = 1;
+		if(m==1) System.out.printf("%.0f la so chinh phuong",p);
+		else System.out.printf("%.0f khong phai la so chinh phuong",p);
+	}
+	public static void main(String[] args) {
+		bai_12 bai12 = new bai_12();
+		bai12.chinhphuong(9);
+	}
+
+}
