@@ -1,0 +1,23 @@
+public class bai_3 {
+
+	public void stg(float a,float b,float c)
+	{
+		float max = a;
+		float min = a;
+		max = (b>max)?b:max;
+		min = (b<min)?b:min;
+		max = (c>max)?c:max;
+		min = (c<min)?c:min;
+		if(a==b||b==c||a==c)
+			System.out.println("khong co so trung gian cua 3 so");
+		else
+			System.out.println("so trung gian la: "+(float)(a+b+c-max-min));
+	}
+	public static void main(String[] args) {
+		bai_3 bai3 = new bai_3();
+		System.out.println("tim so trung gian cua 3 so");
+		bai3.stg(2,4,3);
+		bai3.stg(2, 3, 3);
+	}
+
+}
