@@ -1,0 +1,41 @@
+public class bai_5 {
+	public void songaytuongung(int a,int b)
+	{
+		if(b%4!=0)
+		{
+			if(a==1||a==3||a==5||a==7||a==8||a==10||a==12)
+			{
+				System.out.println("so ngay tuong ung cua thang "+a+" nam "+b+" la: 31");
+			}
+			else if(a==2)
+			{
+				System.out.println("so ngay tuong ung cua thang "+a+" nam "+b+" la: 28");
+			}
+			else
+			{
+				System.out.println("so ngay tuong ung cua thang "+a+" nam "+b+" la: 30");
+			}
+		}
+		else
+		{
+			if(a==1||a==3||a==5||a==7||a==8||a==10||a==12)
+			{
+				System.out.println("so ngay tuong ung cua thang "+a+" nam "+b+" la: 31");
+			}
+			else if(a==2)
+			{
+				System.out.println("so ngay tuong ung cua thang "+a+" nam "+b+" la: 29");
+			}
+			else
+			{
+				System.out.println("so ngay tuong ung cua thang "+a+" nam "+b+" la: 30");
+			}
+		}
+	}
+	public static void main(String[] args) {
+		bai_5 bai5 = new bai_5();
+		bai5.songaytuongung(4,2019);
+		bai5.songaytuongung(2,2020);
+	}
+
+}
