@@ -1,0 +1,14 @@
+public class bai_9 {
+	public void gt(int n)
+	{
+		int s = 1;
+		for(int i=n;i>=1;i-=2)
+			s = s*i;
+		System.out.printf("n!! = %d",s);
+	}
+	public static void main(String[] args) {
+		bai_9 bai9 = new bai_9();
+		bai9.gt(6);
+	}
+
+}
