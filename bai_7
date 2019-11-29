@@ -1,0 +1,21 @@
+public class bai_7 {
+	public static int gt(int i)
+	{
+		if(i==0) return 1;
+		else return i*gt(i-1);
+	}
+	public void tong(int n)
+	{
+		float s = 15;
+		for(int i=1;i<=n;i++)
+		{
+			if(i%2==0) s += (float)1/gt(i);
+			else s -= (float)1/gt(i);
+		}
+		System.out.printf("s = %.2f",s);
+	}
+	public static void main(String[] args) {
+		bai_7 bai7 = new bai_7();
+		bai7.tong(5);
+	}
+}
