@@ -1,0 +1,14 @@
+public class bai_6 {
+	public void tong(int n)
+	{
+		float s=0;
+		for(int i=1;i<=n;i++)
+		s = s +(float)1/i;
+		System.out.println("s = "+s);
+	}
+	public static void main(String[] args) {
+		bai_6 bai6 = new bai_6();
+		bai6.tong(5);
+	}
+
+}
