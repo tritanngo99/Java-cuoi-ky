@@ -1,0 +1,18 @@
+public class bai_1
+{
+	public void ptbn(float a, float b)
+	{
+		if(a==0)
+		{
+			if(b==0) System.out.println("phuong trinh vo so nghiem");
+			else System.out.println("phuong trinh vo nghiem");
+		}
+		else System.out.println("phuong trinh co ngiem: "+(float)-b/a);
+	}
+	public static void main(String[] agrs)
+	{
+		bai_1 bai1 = new bai_1();
+		System.out.println("giai phuong trinh bac nhat");
+		bai1.ptbn(2, 4);
+	}
+}
