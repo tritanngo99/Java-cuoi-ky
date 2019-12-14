@@ -1,0 +1,120 @@
+package pheptinh;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+
+  
+
+public class MinhHoaPhepTinh2 extends Frame implements ActionListener {
+	Label lb1,lb2,lb3,lb4;
+	TextField txt1,txt2,txtkq;
+	Button btn1,btn2,btn3,btn4,btn5,btn6,btn7;
+	Panel pn1,pn2,pn3,pn4,pn;
+	@SuppressWarnings("deprecation")
+	public void GUI()
+	{
+	 lb1=new Label("minh Hoa Phep Tinh");
+	 lb2=new Label("nhap So 1");
+	 lb3=new Label("Nhap So 2");
+	 lb4=new Label("Ket Qua");
+	 txt1=new TextField();
+	 txt2=new TextField();
+	 txtkq=new TextField();
+	 btn1=new Button ("+");
+	 btn2=new Button ("-");
+	 btn3=new Button ("*");
+	 btn4=new Button ("/");
+	 btn5=new Button("%");
+	 btn6=new Button ("Reset");
+	 btn7=new Button ("Exit");
+	 btn1.addActionListener(this);
+	 btn2.addActionListener(this);
+	 btn3.addActionListener(this);
+	 btn4.addActionListener(this);
+	 btn5.addActionListener(this);
+	 btn6.addActionListener(this);
+	 btn7.addActionListener(this);
+	 pn1=new Panel (new FlowLayout());
+		pn1.setBackground(Color.BLUE);
+	 pn2=new Panel(new GridLayout(3,2));
+	 pn3=new Panel (new GridLayout(1,5));
+	 pn4=new Panel (new GridLayout(1,2));
+	 pn=new Panel(new GridLayout(4,1));
+	 pn1.add(lb1);
+	 pn2.add(lb2);
+	 pn2.add(txt1);
+	 pn2.add(lb3);
+	 pn2.add(txt2);
+	 pn2.add(lb4);
+	 pn2.add(txtkq);
+	 pn3.add(btn1);
+	 pn3.add(btn2);
+	 pn3.add(btn3);
+	 pn3.add(btn4);
+	 pn3.add(btn5);
+	 pn4.add(btn6);
+	 pn4.add(btn7);
+	 pn.add(pn1);
+	 pn.add(pn2);
+	 pn.add(pn3);
+	 pn.add(pn4);
+	 add(pn);
+	 setSize(400,400);
+	 show();
+
+	 
+	}
+	public void actionPerformed(ActionEvent e) {
+		
+		int a=Integer.parseInt(txt1.getText());
+		int b=Integer.parseInt(txt2.getText());
+		if (e.getSource()==btn1)
+		{ 
+			txtkq.setText(Float.toString((float)a+b));
+		}
+		else if (e.getSource()==btn2)
+		{
+			txtkq.setText(Float.toString((float)a-b));
+		} else if (e.getSource()==btn3)
+		{
+			txtkq.setText(Float.toString((float)a*b));
+		} else if (e.getSource()==btn4)
+		{
+			txtkq.setText(Float.toString((float)a/b));
+		} else if (e.getSource()==btn5)
+		{
+			txtkq.setText(Float.toString((float)a%b));
+		}
+		else  if (e.getSource()==btn6)
+		{
+			txt1.setText("");
+			txt2.setText("");
+			txtkq.setText("");
+		}
+		else if (e.getSource()==btn7)
+		{
+			System.exit(0);
+		}
+	}
+		public MinhHoaPhepTinh2(String st)
+		{
+			super(st);
+			GUI();
+			addWindowListener (new WindowAdapter() {
+				public void windowClosing(WindowEvent we)
+				{
+					dispose();
+					System.exit(0);
+				}
+			});
+			
+		}
+		public static void main (String [] args)
+		{
+			new MinhHoaPhepTinh2("MinhHoaPhepTinh");
+		}
+	
+
+}
