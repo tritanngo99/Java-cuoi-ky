@@ -1,0 +1,32 @@
+package DATABASE;
+
+import java.sql.*;
+
+public class connect {
+	public static void main(String[] args) throws ClassNotFoundException {
+		
+		try {
+			// Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
+			// String url = "jdbc:odbc:khachhang";
+			// Connection conn = DriverManager.getConnection(url, "login", "password");
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection conn = DriverManager.getConnection(
+					"jdbc:mysql://127.0.0.1:3306/dbtourdulich",
+					"root", "");
+			System.out.println("Ket noi db");
+			Statement stmt = conn.createStatement();
+			ResultSet rs = stmt.executeQuery("SELECT * FROM thanhvien ");
+			while (rs.next()) {
+//				int Id = rs.getInt("id");
+//				String Name = rs.getString("name");
+//				String Address = rs.getString("address");
+//				int Total = rs.getInt("total");
+				System.out.println(rs.getString(1)+"  "+rs.getString(2)+"  "+rs.getDate(3)+" "+rs.getString(4)+" "+rs.getString(5)+" "+rs.getString(6)+" "+rs.getFloat(7));
+			}
+		  conn.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("Error " + e);
+		}
+	}
+}
